@@ -108,5 +108,5 @@ while True:
         random_phrase = random.choice(funny_phrases)
         st.markdown(f"<h2 style='text-align: center; color: #FF5733;'>💬 {random_phrase}</h2>", unsafe_allow_html=True)
     
-    time.sleep(1)
+    time.sleep(5)
     st.rerun()
