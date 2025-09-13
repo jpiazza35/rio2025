@@ -106,7 +106,7 @@ while True:
 
         # Mostrar frase aleatoria
         random_phrase = random.choice(funny_phrases)
-        st.markdown(f"**💬 Frase del día:** {random_phrase}")
+        st.markdown(f"<h2 style='text-align: center; color: #FF5733;'>💬 {random_phrase}</h2>", unsafe_allow_html=True)
     
     time.sleep(1)
     st.rerun()
