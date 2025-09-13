@@ -27,6 +27,34 @@ def show_progress_bar(days_remaining, total_days=365):
     progress = max(0, (total_days - days_remaining) / total_days)
     return progress
 
+funny_phrases = [
+    # Tata
+    "Tata, deja de buscar 'chicas malas' y empieza a buscar tu pasaporte. 🕶️",
+    "Tata, no te pierdas antes del viaje... ¡te necesitamos en Río! 🍷",
+    "Tata, controla la mandíbula, que en Río hay mucho para disfrutar. 😂",
+    
+    # Lucho
+    "Lucho, ¡prepárate para renegar! En Río no te vamos a dejar ser tan cómodo. 😅",
+    
+    # Virche
+    "Virche, endereza ese chasis antes de pisar la playa. 🚗",
+    "Virche, en Río no hay tiempo para torceduras... ¡ponete las pilas! 👀",
+    "Virche, deja el chupe ahora, que en Río hay mucho más para disfrutar. 🍺",
+    
+    # Farina
+    "Farina, el petiso sin cogote, ya debe estar soñando con las playas de Río. 🏖️",
+    "Farina, no te pongas temático con Talleres en Río... ¡relajate un poco! ⚽",
+    "Farina, en Río no hay excusas para ser insoportable... ¡a disfrutar! 🌞",
+    
+    # Filo
+    "Filo, si no llegás en forma, no importa... ¡pero llegá! 💪",
+    "Filo, Río te espera, aunque el gimnasio no te haya visto mucho. 🏋️",
+    "Filo, no te preocupes por ponerte en forma... no te dan los timepos ya 😄",
+    
+    # Martín
+    "Martín, en Río hay buen comer... pero deja algo para los demás. 🍖",
+    "Martín, las chicas malas te esperan en Río...  😏"
+]
 # Interfaz principal
 st.title("🏖️ CONTADOR VACACIONES RÍO 2025 🇧🇷")
 st.markdown("---")
@@ -74,6 +102,10 @@ while True:
             st.info("🌟 ¡MENOS DE UN MES!")
         else:
             st.success("🏖️ Paciencia... ¡Río te está esperando!")
+
+        # Mostrar frase aleatoria
+        random_phrase = random.choice(funny_phrases)
+        st.markdown(f"**💬 Frase del día:** {random_phrase}")
     
     time.sleep(1)
     st.rerun()
